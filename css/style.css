@@ -1153,25 +1153,46 @@ header .navbar-expand-lg .navbar-nav .nav-link:hover {
     height: 224px;
     width: 100%;
     object-fit: scale-down;
-    transition: .4s all ease;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
 }
 /* -------------------------------------------------------------------------------------------------------- */
-.catalog-sec .cat-block:hover .cat-img img:nth-child(1),
-.catalog-sec .cat-block .cat-img img:nth-child(2) {
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0);
+.side-hover {
+    position: relative;
 }
-.catalog-sec .cat-block:hover .cat-img img:nth-child(2) {
+.side-hover-block {
+ position: fixed;
+ left: 350px;
+ top: 0;
+ opacity: 0;
+ width: 570px;
+ height: 100vh;
+ background-color: #fff;
+ padding: 34px 20px;
+ z-index: 999;
+ transition: .5s ease-in-out;
+ overflow-x: hidden;
+ overflow-y: auto;
+}
+.side-hover:hover .side-hover-block {
     opacity: 1;
-    visibility: visible;
-    transform: scale(1);
+}
+.hover-list {
+    height: 100vh;
+}
+.hover-list::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.hover-list::-webkit-scrollbar {
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.hover-list::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
 }
 /* -------------------------------------------------------------------------------------------------------- */
 .catalog-sec .cat-block span {

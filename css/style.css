@@ -1019,7 +1019,7 @@ header .navbar-expand-lg .navbar-nav .nav-link:hover {
     margin-bottom: 12px;
 }
 .catalog-sec .catalog-side .cat-drop-menu a:hover {
-    transform: scale(.98);
+    transform: scale(1);
 }
 .catalog-sec .catalog-side .cat-drop-menu a img {
     margin-right: 8px;
@@ -1155,46 +1155,112 @@ header .navbar-expand-lg .navbar-nav .nav-link:hover {
     object-fit: scale-down;
 }
 /* -------------------------------------------------------------------------------------------------------- */
-.side-hover {
+.side-col {
     position: relative;
 }
 .side-hover-block {
- position: fixed;
- left: 350px;
- top: 0;
- opacity: 0;
- visibility: hidden;
- width: 570px;
- height: 100vh;
- background-color: #fff;
- padding: 34px 20px;
- z-index: 999;
- transition: .5s ease-in-out;
- overflow-x: hidden;
- overflow-y: auto;
+    position: absolute;
+    left: 220px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 600px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 34px 20px;
+    z-index: 9;
+    transition: .3s ease-in;
+    overflow: hidden;
 }
 .side-hover:hover .side-hover-block {
     opacity: 1;
     visibility: visible;
 }
 .hover-list {
-    height: 100vh;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .hover-list::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+	background-color: #DFE1E8;
 }
 
 .hover-list::-webkit-scrollbar {
-	width: 12px;
-	background-color: #F5F5F5;
+	width: 4px;
+	background-color: #DFE1E8;
 }
 
 .hover-list::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #D62929;
+	background-color: #00B0F5;
+}
+
+
+.side-hover-block .hover-top {
+    display: flex; 
+    flex-direction: column;
+    margin-bottom: 27px;
+}
+.side-hover-block .hover-top .form-group {
+    margin-bottom: 22px;
+}
+.side-hover-block .hover-top .form-group input {
+    border-radius: 8px;
+    padding: 9px 10px 9px 48px;
+    background: #EFF5FF url('../images/search-icon.svg') 17px 12px no-repeat;
+    border: none;
+    width: 100%;
+}
+.side-hover-block .hover-top .form-group input::placeholder {
+    font-size: 15px;
+    line-height: 22px;
+    color: #707070;
+}
+
+.side-hover-block .hover-top .top-items a {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+.side-hover-block .hover-top .top-items a span {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 44px;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+}
+.side-hover-block .hover-top .top-items .h-item {
+    position: relative;
+}
+.side-hover-block .hover-top .top-items img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+/* //////// */
+.catalog-sec .catalog-side .cat-drop-menu a:hover {
+    transform: none;
+    font-family: 'PT Root UI Bold';
+    color: #E10B53;
+    font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+    .side-hover-block {
+        width: 100%;
+        left: 0;
+    }
+    .side-hover-block .hover-top .top-items .h-item > a {
+        margin-bottom: 5px;
+    }
 }
 /* -------------------------------------------------------------------------------------------------------- */
 .catalog-sec .cat-block span {

@@ -1021,14 +1021,16 @@ header .navbar-expand-lg .navbar-nav .nav-link:hover {
 .catalog-sec .catalog-side .cat-drop-menu a:hover {
     transform: scale(1);
 }
-.catalog-sec .catalog-side .cat-drop-menu a img {
+/* changed */
+.catalog-sec .catalog-side .cat-drop-menu .side-hover > a img {
     margin-right: 8px;
 }
-.catalog-sec .catalog-side .cat-drop-menu.cat-two a img {
+.catalog-sec .catalog-side .cat-drop-menu.cat-two .side-hover > a img {
     border-radius: 5px;
     height: 32px;
     margin-right: 18px;
 }
+/* end changed */
 .catalog-sec .catalog-side .cat-side-manager {
     padding: 15px 20px;
     background-image: url('../images/cat-side-manager.png');
